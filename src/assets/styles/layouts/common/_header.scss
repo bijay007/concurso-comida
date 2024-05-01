@@ -1,0 +1,25 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    color: #00bfff;
+    padding: 10px;
+}
+
+.logo {
+    /* Add your logo styling here */
+}
+
+.nav {
+    /* Add your navigation styling here */
+}
+
+.nav__item {
+    text-decoration: underline;
+    /* Add any additional styling for navigation items here */
+}
+
+.nav__item:hover {
+    /* Add hover effect styling for navigation items here */
+}
