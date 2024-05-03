@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+footer {
+    display: grid;
+    grid-template: 2fr 1fr / 1fr;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+.footer__contacts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    h3 {
+        text-shadow: 1px 1px 1px rgba(112, 110, 110, 0.5);
+
+    }
+    ol, ul {
+        list-style-type: none;
+        padding: 0;
+        li {
+            margin: auto auto 0.5rem 0.5rem;
+        }
+    }
+}
+
+.footer__links {
+    display: grid;
+    grid-template-columns: 1fr 1.75fr 1fr;
+    align-items: center;
+    nav {
+        justify-self: auto;
+        li {
+            padding: 1rem;
+        }
+    }
+}
+.footer__separator {
+    border-top: 1px solid oklch(89.12% 0.047 254);
+    margin: 1rem auto;
+    @supports not (color: oklch(89.12% 0.047 254)) {
+        border-top-color: rgb(226, 226, 226);
+    }
+}
+.footer__links-logo {
+    img {
+        max-height: 4rem;
+    }
+}
+.footer__links-social {
+    ul {
+        display: grid;
+        justify-content: center;
+        grid-auto-flow: column;
+        margin: 0;
+        padding: 0;
+        gap: 2rem;
+        list-style: none;
+    }
+    i {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+}

@@ -3,6 +3,7 @@
 }
 
 body {
+  margin: 0;
   @supports (background-color: hwb(200, 80%, 8%)) {
     background-color: hwb(200, 80%, 8%);
   }
@@ -11,9 +12,13 @@ body {
   }
 }
 
+.header, .footer {
+  padding: 1rem 4rem;
+}
+
 main {
   display: grid;
-  grid-template-rows: 7rem auto 15rem;
+  grid-template-rows: minmax(8rem 1fr) auto-fill minmax(18rem 2fr);
 }
 
 .contest {
@@ -54,6 +59,11 @@ main {
     border: none;
     border-radius: 5px;
     padding: 1rem 2rem;
-    font-size: 1em;
+    font-size: 1.05em;
+    font-weight: 600;
   }
+}
+
+.footer {
+  background-color: $white;
 }
