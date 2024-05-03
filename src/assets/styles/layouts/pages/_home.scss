@@ -18,12 +18,12 @@ body {
 
 main {
   display: grid;
-  grid-template-rows: minmax(8rem 1fr) auto-fill minmax(18rem 2fr);
+  grid-template: repeat(3, auto) / 1fr;
 }
 
 .contest {
   display: grid;
-  grid-template-rows: 2fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
   gap: 1rem;
   place-items: center;
   padding: 1rem;
@@ -37,6 +37,7 @@ main {
   display: grid;
   gap: 1rem;
   place-items: center;
+  margin-bottom: 2rem;
   h1, p {
     margin: 0.5rem auto;
   }
@@ -59,7 +60,7 @@ main {
     border: none;
     border-radius: 5px;
     padding: 1rem 2rem;
-    font-size: 1.05em;
+    font-size: 1.1em;
     font-weight: 600;
   }
 }

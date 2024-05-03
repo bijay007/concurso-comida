@@ -9,29 +9,31 @@ header {
     max-height: 4rem;
 }
 
-.main__nav {
-    justify-self: end;
-    ul {
-        list-style: none;
-        display: flex;
-        justify-content: space-around;
-        gap: 1rem;
-        font-size: 1.1em;
-        font-weight: bold;
-        font-family: $font-family-sans-serif;
-        padding: 0;
-        li {
-            padding: 0.5rem;
-            &:hover {
-                background-color: #c1d4e6;
-                border-radius: 5px;
-                transform: scale(1.04);
-                transition: transform 0.4s ease;
+@layer components {
+    .main__nav {
+        justify-self: end;
+        ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            gap: 1rem;
+            font-size: 1.1em;
+            font-weight: bold;
+            font-family: $font-family-sans-serif;
+            padding: 0;
+            li {
+                padding: 0.5rem;
+                &:hover {
+                    background-color: #c1d4e6;
+                    border-radius: 5px;
+                    transform: scale(1.04);
+                    transition: transform 0.4s ease;
+                }
             }
         }
-    }
-    a {
-        text-decoration: none;
-        color: $default-text-color;
-    }
+        a {
+            text-decoration: none;
+            color: $default-text-color;
+        }
+    }   
 }
