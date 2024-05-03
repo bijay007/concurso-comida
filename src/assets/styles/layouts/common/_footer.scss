@@ -9,10 +9,7 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     place-items: center;
-    h3 {
-        text-shadow: 1px 1px 1px rgba(112, 110, 110, 0.5);
-
-    }
+    container: contacts / inline-size;
     ol, ul {
         list-style-type: none;
         padding: 0;
@@ -22,10 +19,10 @@ footer {
     }
 }
 
-.footer__links {
+.footer__pages {
     display: grid;
     grid-template-columns: 1fr 1.75fr 1fr;
-    align-items: center;
+    place-items: center;
     nav {
         justify-self: auto;
         li {
@@ -40,12 +37,12 @@ footer {
         border-top-color: rgb(226, 226, 226);
     }
 }
-.footer__links-logo {
+.footer__pages-logo {
     img {
         max-height: 4rem;
     }
 }
-.footer__links-social {
+.footer__pages-social {
     ul {
         display: grid;
         justify-content: center;
@@ -58,5 +55,19 @@ footer {
     i {
         width: 1.2rem;
         height: 1.2rem;
+    }
+}
+
+@container contacts (min-width: 768px) {
+    .footer__contacts-address h3, .footer__contacts-phoneEmail h3 {
+        font-size: 1.8rem;
+        text-shadow: 2px 1px 2px rgba(112, 110, 110, 0.5);
+    }
+}
+
+@container contacts (max-width: 769px) {
+    .footer__contacts-address h3, .footer__contacts-phoneEmail h3 {
+        font-size: 1.6rem;
+        text-shadow: 1px 2px 1px rgba(146, 142, 142, 0.5);
     }
 }
