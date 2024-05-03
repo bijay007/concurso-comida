@@ -1,25 +1,41 @@
 .header {
-    display: flex;
-    justify-content: space-between;
+    padding: 0.75rem 3rem;
+}
+
+header {
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    gap: 1rem;
     align-items: center;
-    background-color: #ffffff;
-    color: #00bfff;
-    padding: 10px;
 }
 
-.logo {
-    /* Add your logo styling here */
+.logo img {
+    max-height: 5rem;
 }
 
-.nav {
-    /* Add your navigation styling here */
+nav {
+    justify-self: end;
 }
 
-.nav__item {
-    text-decoration: underline;
-    /* Add any additional styling for navigation items here */
+ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    font-size: 1.1em;
+    font-weight: bold;
+    font-family: $font-family-sans-serif;
+    li {
+        padding: 0.5rem;
+    }
+    li:hover {
+        background-color: #c1d4e6;
+        border-radius: 5px;
+        transform: scale(1.04);
+        transition: transform 0.4s ease;
+    }
 }
 
-.nav__item:hover {
-    /* Add hover effect styling for navigation items here */
+a {
+    text-decoration: none;
+    color: $default-text-color;
 }

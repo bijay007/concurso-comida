@@ -3,5 +3,57 @@
 }
 
 body {
+  @supports (background-color: hwb(200, 80%, 8%)) {
+    background-color: hwb(200, 80%, 8%);
+  }
+  @supports not (background-color: hwb(200, 80%, 8%)) {
+    background-color: #cce0eb;
+  }
+}
+
+main {
   display: grid;
+  grid-template-rows: 7rem auto 15rem;
+}
+
+.contest {
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  gap: 1rem;
+  place-items: center;
+  padding: 1rem;
+  img {
+    max-width: 85%;
+    padding: 1rem;
+  }
+}
+
+.contest-text {
+  display: grid;
+  gap: 1rem;
+  place-items: center;
+  h1, p {
+    margin: 0.5rem auto;
+  }
+  h1 {
+    font-family: $font-family-serif;
+    font-size: 2.5em;
+    background: linear-gradient(to bottom, $black, $default-text-color);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  p {
+    font-size: 1.25em;
+    font-family: $font-family-sans-serif;
+    font-weight: 400;
+  }
+  button {
+    color: $white;
+    cursor: pointer;
+    background-color: $default-text-color;
+    border: none;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    font-size: 1em;
+  }
 }
