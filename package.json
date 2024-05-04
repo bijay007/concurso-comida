@@ -3,24 +3,15 @@
   "version": "3.8.0",
   "private": true,
   "description": "Boilerplate for Advanced HTML/CSS Tools UOC students",
+  "source": "src/index.html",
   "scripts": {
-    "parcel:serve": "parcel src/index.html -p 8123 --target web --open",
-    "parcel:build": "parcel build src/index.html --target web --no-source-maps --no-cache",
-    "clean": "rimraf dist .cache .cache-loader .parcel-cache",
-    "dev": "npm-run-all clean parcel:serve",
-    "build": "npm-run-all clean stylelint parcel:build",
+    "start": "npm-run-all clean parcel:dev",
+    "build": "npm-run-all clean parcel:build",
+    "parcel:dev": "parcel",
+    "parcel:build": "parcel build",
     "stylelint": "stylelint src/**/*.scss",
-    "test": "echo 'Everything is working as expected ✅\nStart working on your project by running \\033[1mnpm run dev\\033[0m'"
-  },
-  "web": "dist/index.html",
-  "targets": {
-    "web": {
-      "context": "browser",
-      "publicUrl": "./",
-      "engines": {
-        "browsers": "last 2 versions, > 0.5%, not dead"
-      }
-    }
+    "clean": "rimraf dist .parcel-cache",
+    "test": "npm run test"
   },
   "repository": {
     "type": "git",
