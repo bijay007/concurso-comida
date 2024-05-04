@@ -17,26 +17,39 @@ body {
 }
 
 main {
-  display: grid;
-  grid-template: repeat(3, auto) / 1fr;
+  // estilo por defecto
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  // estilo cuando soporta grids
+  @supports (display: grid) {
+    display: grid;
+    grid-template: repeat(3, auto) / 1fr;
+  }
 }
 
 .contest {
-  display: grid;
-  grid-template-rows: repeat(2, 1fr);
-  gap: 1rem;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  place-items: center; // igual a justify-items + align-items
   padding: 1rem;
+  gap: 1rem; // gap forma parte de css3 normal
+  @supports (display: grid) {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+  }
   img {
     max-width: 85%;
-    padding: 1rem;
   }
 }
 
 .contest-text {
-  display: grid;
-  gap: 1rem;
+  display: flex;
   place-items: center;
+  gap: 1rem;
+  @supports (display: grid) {
+    display: grid;
+  }
   margin-bottom: 2rem;
   h1, p {
     margin: 0.5rem auto;

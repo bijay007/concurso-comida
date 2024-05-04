@@ -9,7 +9,7 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     place-items: center;
-    container: contacts / inline-size;
+    container: contacts / inline-size; // shorthand style
     ol, ul {
         list-style-type: none;
         padding: 0;
@@ -49,7 +49,7 @@ footer {
         grid-auto-flow: column;
         margin: 0;
         padding: 0;
-        gap: 2rem;
+        gap: calc(1.5rem + 0.25vw);
         list-style: none;
     }
     i {
@@ -59,15 +59,19 @@ footer {
 }
 
 @container contacts (min-width: 768px) {
-    .footer__contacts-address h3, .footer__contacts-phoneEmail h3 {
-        font-size: 1.8rem;
-        text-shadow: 2px 1px 2px rgba(112, 110, 110, 0.5);
+    .footer__contacts-address, .footer__contacts-phoneEmail {
+        h3 {
+            font-size: 1.8rem;
+            text-shadow: 2px 1px 2px rgba(112, 110, 110, 0.5);
+        }
     }
 }
 
 @container contacts (max-width: 769px) {
-    .footer__contacts-address h3, .footer__contacts-phoneEmail h3 {
-        font-size: 1.6rem;
-        text-shadow: 1px 2px 1px rgba(146, 142, 142, 0.5);
+    .footer__contacts-address, .footer__contacts-phoneEmail {
+        h3 {
+            font-size: 1.6rem;
+            text-shadow: 1px 2px 1px rgba(146, 142, 142, 0.5);
+        }
     }
 }

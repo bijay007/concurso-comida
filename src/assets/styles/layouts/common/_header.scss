@@ -12,11 +12,12 @@ header {
 @layer components {
     .main__nav {
         justify-self: end;
+        container: links / normal; // only for styling purposes
         ul {
             list-style: none;
             display: flex;
             justify-content: space-around;
-            gap: 1rem;
+            gap: calc(0.8rem + 0.2vw);
             font-size: 1.1em;
             font-weight: bold;
             font-family: $font-family-sans-serif;
@@ -36,4 +37,17 @@ header {
             color: $default-text-color;
         }
     }   
+}
+
+@container links (min-width: 399px) {
+    nav ul {
+        font-size: 0.8em;
+        font-weight: normal;
+    }
+}
+@container links (max-width: 400px) {
+    nav ul {
+        font-size: 1.2em;
+        font-weight: bold;
+    }
 }
