@@ -1,0 +1,27 @@
+@import "../variables";
+@import "bootstrap/scss/bootstrap";
+
+* {
+    box-sizing: border-box;
+}
+  
+body {
+  margin: 0;
+}
+main {
+    color: $default-text-color;
+}
+article {
+    background-color: #cce0eb;
+}
+.events {
+    padding: 1.5rem;
+    border-top: 2px solid lighten($default-text-color, 40);
+    border-bottom: 2px solid lighten($default-text-color, 40);
+}
+.events__list {
+    list-style: circled-numbers;
+    li {
+        padding-left: 0.25rem;
+    }
+}
