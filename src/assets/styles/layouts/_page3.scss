@@ -1,18 +1,8 @@
 @import "../variables";
 @import "bootstrap/scss/bootstrap";
 
-* {
-    box-sizing: border-box;
-}
-  
-body {
-  margin: 0;
-}
 main {
     color: $default-text-color;
-}
-article {
-    background-color: #cce0eb;
 }
 .events {
     padding: 1.5rem;
