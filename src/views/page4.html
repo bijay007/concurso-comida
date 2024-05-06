@@ -9,37 +9,106 @@
           href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     </head>
     <body>
-        <h1>Pizza Contest 2023</h1>
-        <p>Last year, we had a pizza contest and it was a huge success. We had
-            participants from all over the world showcasing their unique pizza
-            creations. The judges had a tough time deciding the winners as every
-            pizza was delicious in its own way. This year, we are back with
-            a new Momo Contest 2024 and we are expecting even more excitement
-            and
-            mouth-watering food. Don't miss out on this amazing event!</p>
-        <p>Below are some of the captures from last year.</p>
-        <!-- Slider main container -->
-        <div class="swiper winnerSwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="../assets/images/winner_pizza.jpg"
-                      alt="winner 2023">
+        <section
+          class="contest-previous d-flex flex-column align-items-center py-3 px-2">
+            <h1>Pizza Contest 2023</h1>
+            <p>Last year, we had a pizza contest and it was a huge success. We
+                had
+                participants from all over the world showcasing their unique
+                pizza
+                creations. The judges had a tough time deciding the winners as
+                every
+                pizza was delicious in its own way. This year, we are back with
+                a new Momo Contest 2024 and we are expecting even more
+                excitement
+                and
+                mouth-watering food. Don't miss out on this amazing event!</p>
+            <p class="lead-text">Below are some captures from
+                last
+                year.
+            </p>
+            <!-- Slider main container -->
+            <div class="swiper winnerSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="../assets/images/winner_pizza.jpg"
+                          alt="winner 2023">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../assets/images/runner-up-pizza-1.jpg"
+                          alt="first runner up 2023">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../assets/images/runner-up-pizza-2.jpg"
+                          alt="second runner up 2023">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../assets/images/special-pizza-maker.jpg"
+                          alt="special chef">
+                    </div>
                 </div>
-                <div class="swiper-slide">
-                    <img src="../assets/images/runner-up-pizza-1.jpg"
-                      alt="first runner up 2023">
-                </div>
-                <div class="swiper-slide">
-                    <img src="../assets/images/runner-up-pizza-2.jpg"
-                      alt="second runner up 2023">
-                </div>
-                <div class="swiper-slide">
-                    <img src="../assets/images/special-pizza-maker.jpg"
-                      alt="special chef">
-                </div>
+                <div class="swiper-pagination"></div>
             </div>
-            <div class="swiper-pagination"></div>
-        </div>
+            <p class="lead-text pt-2">Don't miss out on full action of pizza
+                fest:
+            </p>
+            <div class="contest-previous__video px-1">
+                <iframe width="640" height="320"
+                  src="https://www.youtube.com/embed/sjpD9O_K-6Y?si=j3NmCaKWZvQVnoER"
+                  title="Pizza Contest 2023"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen></iframe>
+            </div>
+        </section>
+        <section
+          class="contest-current d-flex flex-column align-items-center py-3 px-2">
+            <h1>Momo Contest 2024</h1>
+            <p>This year, we are back with a new Momo Contest 2024 and we are
+                expecting even more excitement and mouth-watering food. Don't
+                miss
+                out on this amazing event! In order to participate, fill in the
+                form below. Remember, <em> IT'S FREE !!</em></p>
+            <p class="lead-text">Don't forget to fill your details to
+                participate:</p>
+            <form class="contest-current__form py-1 px-3" netlify>
+                <fieldset>
+                    <legend class="fw-bolder py-1">Your contact information
+                    </legend>
+                    <div class="mb-3">
+                        <label class="form-label" for="name">Name</label>
+                        <input class="form-control" type="text" name="name"
+                          placeholder="Name" />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="lastname">Last
+                            Name</label>
+                        <input class="form-control" type="text" name="lastname"
+                          placeholder="Last Name" />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="address">Address</label>
+                        <input class="form-control" type="text" name="address"
+                          placeholder="Address" />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="email">Email</label>
+                        <input class="form-control" type="email" name="email"
+                          placeholder="Email" />
+                        <div id="emailHelp" class="form-text">We'll never share
+                            your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="phonenumber">Phone
+                            Number</label>
+                        <input class="form-control" type="tel"
+                          name="phonenumber" placeholder="Phone Number" />
+                    </div>
+                    <button type="submit"
+                      class="btn btn-primary fw-bolder">Participate</button>
+                </fieldset>
+            </form>
+        </section>
     </body>
     <script
       src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

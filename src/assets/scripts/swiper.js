@@ -5,4 +5,5 @@ var swiper = new Swiper(".winnerSwiper", {
       el: ".swiper-pagination",
       clickable: true,
     },
+    breakpoints: { }
 });
