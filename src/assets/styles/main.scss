@@ -4,6 +4,6 @@
 @import "npm:@fortawesome/fontawesome-free/css/all.css";
 
 //Import layouts
-@import "layouts/header";
-@import "layouts/footer";
+@import "layouts/common/header";
+@import "layouts/common/footer";
 @import "layouts/home";
