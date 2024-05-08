@@ -7,10 +7,8 @@
 :where(main > article) {
     background-color: lighten($default-text-color, 40);
 }
-:where(img) {
-    box-shadow: 4px 8px 8px hsl(0deg 0% 0% / 0.40);
-}
-:is(main, .card, li) { // aqui no funciona :where, pq :where no tiene especifidad (valor 0)
+:is(main, .card, li) {
+    // aqui no funciona :where (porque tiene especifidad 0 y estilos de bootstrap lo machaca). para solucionarlo se puede usar @layer
     color: $default-text-color;
 }
 :is(details, h3) {
@@ -20,15 +18,18 @@ blockquote:has(p, footer) {
     line-height: 1.65;
     text-shadow: 1px 1px 2px #e7d1bb;
 }
+img {
+    box-shadow: 4px 8px 8px hsl(0deg 0% 0% / 0.40);
+}
 .events {
     padding: 1.5rem;
     border-top: 2px solid lighten($default-text-color, 40);
     border-bottom: 2px solid lighten($default-text-color, 40);
-}
-.events__list {
-    list-style: circled-numbers;
-    li {
-        padding-left: 0.25rem;
-        display: list-item;
-    }
+    &__list {
+        list-style: circled-numbers;
+        li {
+            padding-left: 0.25rem;
+            display: list-item;
+        }
+    }    
 }

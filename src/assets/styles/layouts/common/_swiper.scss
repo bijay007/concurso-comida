@@ -1,6 +1,9 @@
 .swiper {
     width: 50rem;
     height: 30rem;
+    .swiper-pagination {
+        background-color: #b4adad4a;
+    }
 }
 
 .swiper-slide {
@@ -10,17 +13,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.swiper > .swiper-pagination {
-    left: 33.33%;
-    width: 33.33%;
-    background-color: #b4adad4a;
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }
