@@ -7,12 +7,14 @@
 }
 
 .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+    text-align: center;
+
+    background: #ffffff;
     img {
         display: block;
         width: 100%;

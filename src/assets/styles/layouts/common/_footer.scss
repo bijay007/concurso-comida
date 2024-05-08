@@ -6,13 +6,13 @@ footer {
     font-family: "Open Sans", sans-serif;
 }
 .footer__contacts {
+    container: contacts / inline-size; // shorthand style
     display: grid;
     grid-template-columns: 1fr 1fr;
     place-items: center;
-    container: contacts / inline-size; // shorthand style
     ol, ul {
-        list-style-type: none;
         padding: 0;
+        list-style-type: none;
         li {
             margin: auto auto 0.5rem 0.5rem;
         }
@@ -37,11 +37,13 @@ footer {
     &--social {
         ul {
             display: grid;
-            justify-content: center;
             grid-auto-flow: column;
+            gap: calc(1.5rem + 0.25vw);
+            justify-content: center;
+
             margin: 0;
             padding: 0;
-            gap: calc(1.5rem + 0.25vw);
+
             list-style: none;
         }
         i {
@@ -51,27 +53,32 @@ footer {
     }
 }
 .footer__separator {
-    border-top: 1px solid oklch(89.12% 0.047 254);
     margin: 1rem auto;
+    border-top: 1px solid oklch(89.12% 0.047 254);
+
     @supports not (color: oklch(89.12% 0.047 254)) {
         border-top-color: rgb(226, 226, 226);
     }
 }
 
 @container contacts (min-width: 768px) {
-    .footer__contacts--address, .footer__contacts--phoneEmail {
-        h3 {
-            font-size: 1.8rem;
-            text-shadow: 2px 1px 2px rgba(112, 110, 110, 0.5);
+    .footer__contacts {
+        &--address, &--phoneEmail {
+            h3 {
+                font-size: 1.8rem;
+                text-shadow: 2px 1px 2px rgba(112, 110, 110, 0.5);
+            }
         }
     }
 }
 
 @container contacts (max-width: 769px) {
-    .footer__contacts--address, .footer__contacts--phoneEmail {
-        h3 {
-            font-size: 1.6rem;
-            text-shadow: 1px 2px 1px rgba(146, 142, 142, 0.5);
+    .footer__contacts {
+        &--address, &--phoneEmail {
+            h3 {
+                font-size: 1.6rem;
+                text-shadow: 1px 2px 1px rgba(146, 142, 142, 0.5);
+            }
         }
     }
 }

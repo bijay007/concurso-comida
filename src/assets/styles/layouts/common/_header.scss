@@ -11,30 +11,32 @@ header {
 
 @layer components {
     .main__nav {
-        justify-self: end;
         container: links / normal; // only for styling purposes
+        justify-self: end;
         ul {
-            list-style: none;
             display: flex;
-            justify-content: space-around;
             gap: calc(0.8rem + 0.2vw);
+            justify-content: space-around;
+
+            padding: 0;
+
+            font-family: $font-family-sans-serif;
             font-size: 1.1em;
             font-weight: bold;
-            font-family: $font-family-sans-serif;
-            padding: 0;
+            list-style: none;
             li {
                 padding: 0.5rem;
                 &:hover {
+                    transform: scale(1.04);
                     background-color: #c1d4e6;
                     border-radius: 5px;
-                    transform: scale(1.04);
                     transition: transform 0.4s ease;
                 }
             }
         }
         a {
-            text-decoration: none;
             color: $default-text-color;
+            text-decoration: none;
         }
     }   
 }
@@ -45,6 +47,7 @@ header {
         font-weight: normal;
     }
 }
+
 @container links (max-width: 400px) {
     nav ul {
         font-size: 1.2em;

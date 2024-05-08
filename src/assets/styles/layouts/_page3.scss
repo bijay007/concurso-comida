@@ -1,6 +1,7 @@
 @import "../variables";
 @import "bootstrap/scss/bootstrap";
 
+// stylelint-disable scss/no-global-function-names
 :where(h1, h3) {
     text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 0px -4px 10px rgba(255,255,255,0.3);
 }
@@ -8,7 +9,8 @@
     background-color: lighten($default-text-color, 40);
 }
 :is(main, .card, li) {
-    // aqui no funciona :where (porque tiene especifidad 0 y estilos de bootstrap lo machaca). para solucionarlo se puede usar @layer
+    /* aqui no funciona :where (porque tiene especifidad 0 y estilos de bootstrap lo machaca).
+    para solucionarlo se puede usar @layer */
     color: $default-text-color;
 }
 :is(details, h3) {
@@ -28,8 +30,9 @@ img {
     &__list {
         list-style: circled-numbers;
         li {
-            padding-left: 0.25rem;
             display: list-item;
+            padding-left: 0.25rem;
         }
     }    
 }
+// stylelint-enable scss/no-global-function-names
